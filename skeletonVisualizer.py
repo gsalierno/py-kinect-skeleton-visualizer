@@ -18,7 +18,7 @@ class skeletonVisualizer:
 	def load_skeleton_data(self, src_folder):
 		bodyFrame = []
 		for file in os.listdir(src_folder):
-			if('body_behaviour_' in file):
+			if('kinect-skeleton_' in file):
 				bodyFrame.append(pd.DataFrame(pd.read_csv(os.path.join(src_folder, file))))
 		return bodyFrame
 	
@@ -113,4 +113,4 @@ class skeletonVisualizer:
 
 if __name__ == "__main__":
 	#skeletonVisualizer('skeleton-data.csv').plot_skeleton_image('0 days 00:00:49.170000000')
-	skeletonVisualizer('skeleton-data.csv').plot_animation()
+	skeletonVisualizer('./data/').plot_animation()
