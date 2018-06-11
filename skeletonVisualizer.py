@@ -105,7 +105,10 @@ class skeletonVisualizer:
 				plots[1][link].set_ydata(ys)
 			return tuple(list(set(plots[0].values()).union(plots[1].values())))
 
-		ani = animation.FuncAnimation(fig, animate, init_func=init, frames=1000, blit=True)
+		ani = animation.FuncAnimation(fig, animate, init_func=init, 
+													frames=self.skeleton_data[0]['timestamp'].count(),
+													interval=10,
+													blit=True)
 		plt.show()
 
 if __name__ == "__main__":
