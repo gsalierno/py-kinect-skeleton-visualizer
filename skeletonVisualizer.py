@@ -7,7 +7,6 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 from mpl_toolkits.mplot3d import Axes3D
 from math import inf
-from matplotlib import collections  as mc
 
 class skeletonVisualizer:
 
